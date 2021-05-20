@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/20/test/" data-id="ckowxwbyt0002v8uwgvue05ps" data-title="test" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/20/test/" data-id="ckowyoijg0002scuw41m764al" data-title="test" class="article-share-link">Share</a>
       
       
       
@@ -148,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/20/hello-world/" data-id="ckowxwbyh0000v8uw8ozqa9i5" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/20/hello-world/" data-id="ckowyoij50000scuw4ui6fafr" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -182,7 +182,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="hexo博客搭建-win10"><a href="#hexo博客搭建-win10" class="headerlink" title="hexo博客搭建 win10"></a>hexo博客搭建 win10</h3><p>先下载node.js，网址<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></p>
+        <h3 id="hexo博客搭建-win10（保姆级）"><a href="#hexo博客搭建-win10（保姆级）" class="headerlink" title="hexo博客搭建 win10（保姆级）"></a>hexo博客搭建 win10（保姆级）</h3><p>先下载node.js，网址<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></p>
 <p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519211747822.png" alt="1"></p>
 <p>然后一直点击下一步，默认安装就行</p>
 <p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212039417.png" alt="image-20210519212039417"></p>
@@ -246,12 +246,14 @@
 <p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520193639121.png" alt="image-20210520193639121"></p>
 </li>
 <li><p>换github继续搭建</p>
-<h3 id="把博客部署到github上"><a href="#把博客部署到github上" class="headerlink" title="把博客部署到github上"></a>把博客部署到github上</h3></li>
+</li>
+</ol>
+<h3 id="把博客部署到github上"><a href="#把博客部署到github上" class="headerlink" title="把博客部署到github上"></a>把博客部署到github上</h3><ol>
 <li><p>新建一个仓库</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/Users\mokez\AppData\Roaming\Typora\typora-user-images\image-20210520212036630.png" alt="image-20210520212036630"></p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212036630.png" alt="image-20210520212036630"></p>
 </li>
 <li><p>用户部署个人博客的github仓库的命名必须符合特定要求才行（xx.github.io）</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/Users\mokez\AppData\Roaming\Typora\typora-user-images\image-20210520212204490.png" alt="image-20210520212204490"></p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212204490.png" alt="image-20210520212204490"></p>
 </li>
 <li><p>然后在命令行中，安装一个插件，输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install  --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
@@ -261,14 +263,34 @@
 <p>repo：是刚刚创建的github仓库的地址，去github上copy下来即可。</p>
 </li>
 <li><p>现在我们就可以推送到远程仓库了，</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;test&quot; #这是新建一个test.md</span><br><span class="line">hexo clean   #推送前先清理一下</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo d #推送</span><br></pre></td></tr></table></figure></li>
-<li></li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;test&quot; #这是新建一个test.md</span><br><span class="line">hexo clean   #推送前先清理一下</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo d  -g#推送</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213906982.png" alt="image-20210520213906982"></p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213948352.png" alt="image-20210520213948352"></p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214310236.png" alt="image-20210520214310236"></p>
+</li>
+<li><p>输入账号密码</p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214255327.png" alt="image-20210520214255327"></p>
+</li>
+<li><p>再输入一次账号密码</p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214415924.png" alt="image-20210520214415924"></p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214448127.png" alt="image-20210520214448127"></p>
+</li>
+<li><p>然后刷新github,可以看看自己推送成功没有</p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214821356.png" alt="image-20210520214821356"></p>
+</li>
+<li><p>在浏览器输入，仓库名后面</p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214918157.png" alt="image-20210520214918157"></p>
+</li>
+<li><p>终于成功了！！！</p>
+<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214707687.png" alt="image-20210520214707687"></p>
+</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" data-id="ckowxwbyq0001v8uwbzujg9d2" data-title="hexo博客搭建" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" data-id="ckowyoijd0001scuwabwa310n" data-title="hexo博客搭建" class="article-share-link">Share</a>
       
       
       
