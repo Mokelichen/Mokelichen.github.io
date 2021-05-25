@@ -6,51 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>hexo博客搭建 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo博客搭建 win10（保姆级）先下载node.js，网址https:&#x2F;&#x2F;nodejs.org&#x2F;  然后一直点击下一步，默认安装就行  按win+R ，输入cmd，进入命令行模式，输入node -v,npm -v，查看是否安装成功和下载版本  npm这个包管理器的源在国内较慢，所以安装cnpm（淘宝的源，速度更快），输入 1npm install -g cnpm --registry&#x3D;htt">
+  <meta name="description" content="psutil模块的使用psutil介绍 process and system utilities(进程和系统工具) 能够轻松的实现获取系统运行的进程和系统利用率（CPU、内存、磁盘、网络等）信息，主要应用于系统监控。 实现了同等命令命令行实现的功能：ps、top、lsof、netstat、ifconfig、who、df、kill、free、nice、ionice、iostat、iotop、upti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客搭建">
-<meta property="og:url" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/05/25/psutil%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="hexo博客搭建 win10（保姆级）先下载node.js，网址https:&#x2F;&#x2F;nodejs.org&#x2F;  然后一直点击下一步，默认安装就行  按win+R ，输入cmd，进入命令行模式，输入node -v,npm -v，查看是否安装成功和下载版本  npm这个包管理器的源在国内较慢，所以安装cnpm（淘宝的源，速度更快），输入 1npm install -g cnpm --registry&#x3D;htt">
+<meta property="og:description" content="psutil模块的使用psutil介绍 process and system utilities(进程和系统工具) 能够轻松的实现获取系统运行的进程和系统利用率（CPU、内存、磁盘、网络等）信息，主要应用于系统监控。 实现了同等命令命令行实现的功能：ps、top、lsof、netstat、ifconfig、who、df、kill、free、nice、ionice、iostat、iotop、upti">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519211747822.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212039417.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212228954.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212705764.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213046418.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213129582.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213901920.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214102327.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214415553.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214740861.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215347731.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215915029.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220114067.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220334226.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223710169.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223959818.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520193639121.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212036630.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212204490.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213906982.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213948352.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214310236.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214255327.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214415924.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214448127.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214821356.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214918157.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214707687.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222029579.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222512881.png">
-<meta property="og:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520223130406.png">
-<meta property="article:published_time" content="2021-05-20T12:04:49.000Z">
-<meta property="article:modified_time" content="2021-05-20T14:32:49.755Z">
+<meta property="article:published_time" content="2021-05-25T05:22:48.740Z">
+<meta property="article:modified_time" content="2021-05-25T05:46:20.611Z">
 <meta property="article:author" content="Mokelichen">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519211747822.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -186,142 +154,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo博客搭建" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-psutil模块的使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      hexo博客搭建
-    </h1>
-  
-
-        
-        <a href="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2021-05-20T12:04:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="hexo博客搭建-win10（保姆级）"><a href="#hexo博客搭建-win10（保姆级）" class="headerlink" title="hexo博客搭建 win10（保姆级）"></a>hexo博客搭建 win10（保姆级）</h3><p>先下载node.js，网址<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519211747822.png" alt="1"></p>
-<p>然后一直点击下一步，默认安装就行</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212039417.png" alt="image-20210519212039417"></p>
-<p>按win+R ，输入cmd，进入命令行模式，输入node -v,npm -v，查看是否安装成功和下载版本</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212228954.png" alt="image-20210519212228954"></p>
-<p>npm这个包管理器的源在国内较慢，所以安装cnpm（淘宝的源，速度更快），输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+        <h1 id="psutil模块的使用"><a href="#psutil模块的使用" class="headerlink" title="psutil模块的使用"></a>psutil模块的使用</h1><h3 id="psutil介绍"><a href="#psutil介绍" class="headerlink" title="psutil介绍"></a>psutil介绍</h3><ul>
+<li>process and system utilities(进程和系统工具)</li>
+<li>能够轻松的实现获取系统运行的进程和系统利用率（CPU、内存、磁盘、网络等）信息，主要应用于系统监控。</li>
+<li>实现了同等命令命令行实现的功能：ps、top、lsof、netstat、ifconfig、who、df、kill、free、nice、ionice、iostat、iotop、uptime、pidof、tty、taskset、pmap等</li>
+<li>跨平台：linux、windows、OS X、FreeBSD和Sun Solaris等</li>
+<li>主要功能包含：CPU、磁盘、内存、网络、进程</li>
+</ul>
+<h3 id="psutil安装"><a href="#psutil安装" class="headerlink" title="psutil安装"></a>psutil安装</h3><p>​    源码安装：git clone <a target="_blank" rel="noopener" href="https://github.com/giampaolo/psutil.git">https://github.com/giampaolo/psutil.git</a>            </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd psutil</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212705764.png" alt="image-20210519212705764"></p>
-<p>cnpm 安装hexo-cli，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>​    pip3安装，pip3 install psutil，前提需要安装好python</p>
+<p>​    导入使用模块：import psutil</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python <span class="number">3.6</span><span class="number">.8</span> (default, Aug  <span class="number">7</span> <span class="number">2019</span>, <span class="number">17</span>:<span class="number">28</span>:<span class="number">10</span>)</span><br><span class="line">[GCC <span class="number">4.8</span><span class="number">.5</span> <span class="number">20150623</span> (Red Hat <span class="number">4.8</span><span class="number">.5</span>-<span class="number">39</span>)] on linux</span><br><span class="line"><span class="type">Type</span> <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> <span class="keyword">or</span> <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> psutil</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213046418.png" alt="image-20210519213046418"></p>
-<p>查看hexo是否安装成功，输入hexo -v</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213129582.png" alt="image-20210519213129582"></p>
-<p>创建一个文件夹blog，示例在D:\blog，如果搭建出现错误，则把文件夹清空重来就行。</p>
-<p>cd D:\blog ,输入hexo init ，初始化博客，然后可以看到hexo自动在blog文件夹下面生成了很多文件，代表初始化成功了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><p>查看cpu的各项参数</p>
+<p>cpu（相当于linux命令：top)    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">psutil.cpu_count(,[logical])<span class="comment">#:默认返回逻辑CPU的个数,当设置logical的参数为False时，返回物理CPU的个数</span></span><br><span class="line"></span><br><span class="line">psutil.cpu_percent(,[percpu],[interval])<span class="comment">#：返回CPU的利用率,percpu为True时显示所有物理核心的利用率,interval不为0时,则阻塞时显示interval执行的时间内的平均利用率</span></span><br></pre></td></tr></table></figure>
 
-<p> <img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213901920.png" alt="image-20210519213901920"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214102327.png" alt="image-20210519214102327"></p>
-<p>启动博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">psutil.cpu_times(,[percpu])<span class="comment">#：以命名元组(namedtuple)的形式返回cpu的时间花费,percpu=True表示获取每个CPU的时间花费。</span></span><br><span class="line">其中：</span><br><span class="line">psutil.cpu_times(,[percpu]).user<span class="comment">#：执行用户进程的时间</span></span><br><span class="line">psutil.cpu_times(,[percpu]).system<span class="comment">#：执行内核进程时间</span></span><br><span class="line">psutil.cpu_times(,[percpu]).idle<span class="comment">#：闲置的时间</span></span><br><span class="line">psutil.cpu_times(,[percpu]).iowait<span class="comment">#：等待io操作的时间</span></span><br><span class="line">psutil.cpu_times(,[percpu]).irp<span class="comment">#：硬中断时间</span></span><br><span class="line">psutil.cpu_times(,[percpu]).softirq<span class="comment">#：软中断时间</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214415553.png" alt="image-20210519214415553"></p>
-<p>打开浏览器，输入localhost:4000，可以看到hexo已经默认生成一篇hello world博客。<img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214740861.png" alt="image-20210519214740861"></p>
-<p>返回终端，ctrl+c 断开连接，开始新建一篇博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;hexo博客搭建&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">psutil.cpu_times_percent(,[percpu])<span class="comment">#：功能和cpu_times大致相同，返回耗时比例</span></span><br><span class="line">psutil.cpu_stats()<span class="comment">#: 以命名元组的形式返回CPU的统计信息，包括上下文切换，中断，软中断和系统调用次数</span></span><br><span class="line">其中：</span><br><span class="line">psutil.cpu_stats().ctx_switches<span class="comment">#:上下文切换次数</span></span><br><span class="line">psutil.cpu_stats().interrupts<span class="comment">#：中断次数</span></span><br><span class="line">psutil.cpu_stats().soft_interrupts<span class="comment">#：软中断次数</span></span><br><span class="line">psutil.cpu_stats().syscalls<span class="comment">#：系统调用次数，linux上始终为0</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215347731.png" alt="image-20210519215347731"></p>
-<p>编辑md文件（此步省略）</p>
-<p>编辑完成之后，输入，清理一下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psutil.cpu_freq()<span class="comment">#: 返回cpu频率</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215915029.png" alt="image-20210519215915029"></p>
-<p>生成一下博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="memory（内存）"><a href="#memory（内存）" class="headerlink" title="memory（内存）"></a>memory（内存）</h3><p>memory(相当于linux命令：free)    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">psutil.virtual_memory()<span class="comment">#:以命名元组的形式返回内存使用情况,单位为字节</span></span><br><span class="line">psutil.virtual_memory().total<span class="comment">#:总物理内存</span></span><br><span class="line">psutil.virtual_memory().available<span class="comment">#:可用内存，available ～free + buffers + cached</span></span><br><span class="line">psutil.virtual_memory().percent<span class="comment">#:使用率： percent = (total - available) / total * 100</span></span><br><span class="line">psutil.virtual_memory().used<span class="comment">#：使用的内存： used  =  total - free - buffers - cache</span></span><br><span class="line">psutil.virtual_memory().free<span class="comment">#：完全没用使用内存</span></span><br><span class="line">psutil.virtual_memory().active<span class="comment">#：最近被访问的内存</span></span><br><span class="line">psutil.virtual_memory().inactive<span class="comment">#：长时间未被访问的内存</span></span><br><span class="line">psutil.virtual_memory().buffers<span class="comment">#：缓存</span></span><br><span class="line">psutil.virtual_memory().cached<span class="comment">#：缓存</span></span><br><span class="line">psutil.virtual_memory().slab<span class="comment">#：内核数据结构缓存的内存</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220114067.png" alt="image-20210519220114067"></p>
-<p>再次启动hexo，输入hexo s ，进入浏览器，输入localhost:4000<img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220334226.png" alt="image-20210519220334226"></p>
-<p>图片上传错误解决方法，参考</p>
-<p>注意图片的格式，（xxx/test.png） xxx是文件夹，一定需要使用/，而不是\</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f72aaad7b852">https://www.jianshu.com/p/f72aaad7b852</a></p>
-<h3 id="把博客部署到gitee上（失败）"><a href="#把博客部署到gitee上（失败）" class="headerlink" title="把博客部署到gitee上（失败）"></a>把博客部署到gitee上（失败）</h3><ol>
-<li><p>首先，创建一个gitee仓库</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223710169.png" alt="image-20210519223710169"></p>
-</li>
-<li><p>安装hexo的 git 部署插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psutil.swap_memory()<span class="comment">#：以命名元组的形式返回swap/memory使用情况，包含swap中页的换入和换出</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223959818.png" alt="image-20210519223959818"></p>
-</li>
-<li><p>配置blog目录下_config.yml，在最后添加deploy:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: https://gitee.com/mokez/mokez_blog.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="disk"><a href="#disk" class="headerlink" title="disk"></a>disk</h3><p>disk（linux命令：iostat，df）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">psutil.disk_io_counters([perdisk])<span class="comment">#：以命名元组的形式返回磁盘io统计信息(汇总的)，包括读、写的次数，读、写的字节数等</span></span><br><span class="line">psutil.disk_partitions()<span class="comment">#:磁盘挂载分区信息</span></span><br><span class="line">		device：分区</span><br><span class="line">		mountpoint：挂载点</span><br><span class="line">		fstype：文件系统格式（fat、ext4、 xfs）</span><br><span class="line">		opts：挂载参数</span><br></pre></td></tr></table></figure>
 
-<p>保存退出</p>
-</li>
-<li><p>部署到远程仓库，hexo d</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
-<li><p>然后登陆gitee，发现……..</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520193639121.png" alt="image-20210520193639121"></p>
-</li>
-<li><p>换github继续搭建</p>
-</li>
-</ol>
-<h3 id="把博客部署到github上"><a href="#把博客部署到github上" class="headerlink" title="把博客部署到github上"></a>把博客部署到github上</h3><ol>
-<li><p>新建一个仓库</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212036630.png" alt="image-20210520212036630"></p>
-</li>
-<li><p>用户部署个人博客的github仓库的命名必须符合特定要求才行（xx.github.io）</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212204490.png" alt="image-20210520212204490"></p>
-</li>
-<li><p>然后在命令行中，安装一个插件，输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install  --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li><p>设置blog下的_config.yml，在最后输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/Mokelichen/Mokelichen.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">disk_usage<span class="comment">#：磁盘使用情况，需要传入一个路径参数</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>psutil.disk_usage(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">sdiskusage(total=<span class="number">250685575168</span>, used=<span class="number">103938019328</span>, free=<span class="number">134242258944</span>, percent=<span class="number">43.6</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>repo：是刚刚创建的github仓库的地址，去github上copy下来即可。</p>
-</li>
-<li><p>现在我们就可以推送到远程仓库了，</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;test&quot; #这是新建一个test.md</span><br><span class="line">hexo clean   #推送前先清理一下</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo d  -g#推送</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iostat命令  #：  %util 数值越大越忙碌，到达了io瓶颈（安装包：yum install sysstat）</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213906982.png" alt="image-20210520213906982"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213948352.png" alt="image-20210520213948352"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214310236.png" alt="image-20210520214310236"></p>
-</li>
-<li><p>输入账号密码</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214255327.png" alt="image-20210520214255327"></p>
-</li>
-<li><p>再输入一次账号密码</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214415924.png" alt="image-20210520214415924"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214448127.png" alt="image-20210520214448127"></p>
-</li>
-<li><p>然后刷新github,可以看看自己推送成功没有</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214821356.png" alt="image-20210520214821356"></p>
-</li>
-<li><p>在浏览器输入，仓库名后面</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214918157.png" alt="image-20210520214918157"></p>
-</li>
-<li><p>终于成功了！！！</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214707687.png" alt="image-20210520214707687"></p>
-</li>
-</ol>
-<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><ol>
-<li><p>先下载一个yilia主题</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222029579.png" alt="image-20210520222029579"></p>
-</li>
-<li><p>然后打开_config.yml，将theme更换为yilia</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222512881.png" alt="image-20210520222512881"></p>
-</li>
-<li><p>然后同上推送，就成功了</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520223130406.png" alt="image-20210520223130406"></p>
-<p>完美！</p>
-</li>
-</ol>
+<h3 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h3><p>Network（相当于linux命令：ifconfig、who、uptime，netstat）    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">psutil.net_io_counters([pernic])<span class="comment">#：以命名元组的形式返回当前系统中每块网卡的网络io统计信息，包括收发字节数，收发包的数量、出错的情况和删包情况。当pernic为True时，则列出所有网卡的统计信息。</span></span><br><span class="line">lo ：本地回环地址（<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>）</span><br><span class="line">psutil.net_connections([kind])：以列表的形式返回每个网络连接的详细信息(namedtuple)</span><br><span class="line">	fd：文件描述符</span><br><span class="line">	family：地址簇，ipv4（AF_INET），ipv6</span><br><span class="line">	<span class="built_in">type</span>：SOCK_STREAM（tcp）、udp</span><br><span class="line">	laddr:本地ip地址</span><br><span class="line">	raddr</span><br><span class="line">	status</span><br><span class="line">	pid</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">psutil.net_if_addrs()<span class="comment">#：以字典的形式返回网卡的配置信息，包括IP地址和mac地址、子网掩码和广播地址。</span></span><br><span class="line">psutil.net_if_stats()<span class="comment">#：返回网卡的详细信息，包括是否启动、通信类型、传输速度与mtu</span></span><br><span class="line">	mtu：最大传输单元</span><br><span class="line">psutil.users()<span class="comment">#：以命名元组的方式返回当前登陆用户的信息，包括用户名，登陆时间，终端</span></span><br><span class="line">psutil.boot_time()<span class="comment">#：以时间戳的形式返回系统的启动时间</span></span><br><span class="line">使用time模块来处理时间戳</span><br></pre></td></tr></table></figure>
+
+<h3 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h3><p>进程管理（linux命令：ps、kill）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">psutil.pids()<span class="comment">#：以列表的形式返回当前正在运行的进程</span></span><br><span class="line">psutil.pid_exists(<span class="number">1</span>)<span class="comment">#：判断给点定的pid是否存在</span></span><br><span class="line">psutil.Process(<span class="number">1</span>)<span class="comment">#：对进程进行封装，可以使用该类的方法获取进行的详细信息，或者给进程发送信号</span></span><br><span class="line">psutil.process_iter()<span class="comment">#：迭代当前正在运行的进程，返回的是每个进程的Process对象</span></span><br><span class="line">	name：获取进程的名称</span><br><span class="line">	cmdline：获取启动进程的命令行参数</span><br><span class="line"></span><br><span class="line">	create_time：获取进程的创建时间</span><br><span class="line">	uids：进程uid信息</span><br><span class="line">	num_threads：开启的线程数</span><br><span class="line">	exe：进程工作的绝对路径</span><br><span class="line">	kill：发送SIGKILL信号结束进程</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -401,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/25/psutil%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -415,15 +298,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/05/24/HTML%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
+    <a href="/2021/05/24/HTML%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
