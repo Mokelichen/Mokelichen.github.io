@@ -279,15 +279,12 @@
         <h1 id="iptables实验"><a href="#iptables实验" class="headerlink" title="iptables实验"></a>iptables实验</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><p>模拟内网向公网发布服务，实现iptables发布dns，ftp，以及ssh服务</p>
 <h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><p>准备4台虚拟机，全部设置桥接模式，并配好IP地址</p>
 <ol>
-<li><p>搭建DNS服务器</p>
-</li>
-<li><p>搭建FTP服务器</p>
-</li>
-<li><p>堡垒机</p>
-</li>
-<li><p>路由转发，编写脚本，写iptables策略</p>
-</li>
-<li><p>测试</p>
+<li>搭建DNS服务器</li>
+<li>搭建FTP服务器</li>
+<li>堡垒机</li>
+<li>路由转发，编写脚本，写iptables策略</li>
+<li>测试</li>
+</ol>
 <p>实验项目图</p>
 <p><img src="/2021/07/20/iptables/QQ%E6%88%AA%E5%9B%BE20210719214939.png" alt="QQ截图20210719214939"></p>
 <ol>
@@ -315,8 +312,6 @@
 <p><img src="/2021/07/20/iptables/image-20210720214950679.png" alt="image-20210720214950679"></p>
 </li>
 </ol>
-</li>
-</ol>
 <h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>1.ftp的主被动模式</p>
 <p>发现centos8中主动模式可以ftp联通，并可以上传下载文件，但被动模式不可以</p>
 <p>主动模式没有问题，但是被动模式不能出效果 ，先lsmod看看内核加载了哪些模块，没有以下模块，需要装上</p>
@@ -325,7 +320,7 @@
 <p>2.windows10的防火墙</p>
 <p>一定一定要关闭win10的防火墙！！！！！！！</p>
 <p>打开 <strong>控制面板\所有控制面板项\Windows Defender 防火墙</strong>，然后关闭防火墙</p>
-<p><img src="/2021/07/20/iptables/Users\mokez\AppData\Roaming\Typora\typora-user-images\image-20210720220232202.png" alt="image-20210720220232202"></p>
+<p><img src="/2021/07/20/iptables/image-20210720220232202.png" alt="image-20210720220232202"></p>
 
       
 
