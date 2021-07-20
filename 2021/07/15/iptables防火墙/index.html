@@ -8,17 +8,25 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>iptables防火墙 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iptables防火墙 查看内核版本  查看系统版本">
+  <meta name="description" content="iptables防火墙Linux系统的防火墙功能是由内核实现的  2.0 版内核中，包过滤机制是ipfw，管理工具是ipfwadm 2.2 版内核中，包过滤机制是ipchain，管理工具是ipchains 2.4 版及以后的内核中，包过滤机制是netfilter，管理工具是iptables  centos 8 中，查看内核版本  查看系统版本  netfilter 位于Linux内核中的包过滤防火">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iptables防火墙">
 <meta property="og:url" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="iptables防火墙 查看内核版本  查看系统版本">
+<meta property="og:description" content="iptables防火墙Linux系统的防火墙功能是由内核实现的  2.0 版内核中，包过滤机制是ipfw，管理工具是ipfwadm 2.2 版内核中，包过滤机制是ipchain，管理工具是ipchains 2.4 版及以后的内核中，包过滤机制是netfilter，管理工具是iptables  centos 8 中，查看内核版本  查看系统版本  netfilter 位于Linux内核中的包过滤防火">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715101152252.png">
 <meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715101234406.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717155719587.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715144251176.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160202496.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715120215924.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160300423.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715150100218.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715153852121.png">
+<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715170938751.png">
 <meta property="article:published_time" content="2021-07-15T02:46:33.000Z">
-<meta property="article:modified_time" content="2021-07-15T02:51:39.266Z">
+<meta property="article:modified_time" content="2021-07-20T12:57:23.141Z">
 <meta property="article:author" content="Mokelichen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715101152252.png">
@@ -177,11 +185,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>iptables防火墙</p>
-<p>查看内核版本</p>
+        <h2 id="iptables防火墙"><a href="#iptables防火墙" class="headerlink" title="iptables防火墙"></a>iptables防火墙</h2><p>Linux系统的防火墙功能是由<em><strong>内核</strong></em>实现的</p>
+<ul>
+<li>2.0 版内核中，包过滤机制是ipfw，管理工具是ipfwadm</li>
+<li>2.2 版内核中，包过滤机制是ipchain，管理工具是ipchains</li>
+<li>2.4 版及以后的内核中，包过滤机制是<strong>netfilter</strong>，管理工具是<strong>iptables</strong></li>
+</ul>
+<p>centos 8 中，查看内核版本</p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715101152252.png" alt="image-20210715101152252"></p>
 <p>查看系统版本</p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715101234406.png" alt="image-20210715101234406"></p>
+<h4 id="netfilter"><a href="#netfilter" class="headerlink" title="netfilter"></a>netfilter</h4><ul>
+<li>位于Linux内核中的包过滤防火墙功能体系</li>
+<li>称为Linux防火墙的“内核态”</li>
+</ul>
+<h4 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h4><ul>
+<li>位于/usr/sbin/iptables，是用来管理防火墙的命令工具</li>
+<li>为防火墙体系提供过滤规则/策略，决定如何过滤或处理到达防火墙主机的数据包</li>
+<li>称为Linux防火墙的“用户态”</li>
+</ul>
+<p>—— 习惯上，上述2种称呼都可以代表Linux防火墙</p>
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717155719587.png" alt="image-20210717155719587"></p>
+<h3 id="iptables四表五链"><a href="#iptables四表五链" class="headerlink" title="iptables四表五链"></a>iptables四表五链</h3><h4 id="规则链"><a href="#规则链" class="headerlink" title="规则链"></a>规则链</h4><ul>
+<li>规则的作用在于对数据包进行过滤或处理，根据处理时机的不同，各种规则被组织在不同的“链”中</li>
+<li>规则链是防火墙规则/策略的集合</li>
+</ul>
+<h4 id="默认的5种规则链"><a href="#默认的5种规则链" class="headerlink" title="默认的5种规则链"></a>默认的5种规则链</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. INPUT：处理入站数据包</span><br><span class="line">2. OUTPUT：处理出站数据包</span><br><span class="line">3. FORWARD：处理转发数据包</span><br><span class="line">4. POSTROUTING链：在进行路由选择后处理数据包</span><br><span class="line">5. PREROUTING链：在进行路由选择前处理数据包</span><br></pre></td></tr></table></figure>
+
+<h4 id="规则表"><a href="#规则表" class="headerlink" title="规则表"></a>规则表</h4><ul>
+<li>具有某一类相似用途的防火墙规则，按照不同处理时机区分到不同的规则链以后，被归置到不同的“表”中</li>
+<li>规则表是规则链的集合</li>
+</ul>
+<h4 id="默认的4个规则表"><a href="#默认的4个规则表" class="headerlink" title="默认的4个规则表"></a>默认的4个规则表</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. raw表：确定是否对该数据包进行状态跟踪</span><br><span class="line">2. mangle表：为数据包设置标记</span><br><span class="line">3. nat表：修改数据包中的源、目标IP地址或端口</span><br><span class="line">4. filter表：确定是否放行该数据包（过滤）</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715144251176.png" alt="image-20210715144251176"></p>
+<h4 id="数据包过滤匹配流程"><a href="#数据包过滤匹配流程" class="headerlink" title="数据包过滤匹配流程"></a>数据包过滤匹配流程</h4><h5 id="规则表间的优先顺序"><a href="#规则表间的优先顺序" class="headerlink" title="规则表间的优先顺序"></a>规则表间的优先顺序</h5><p>依次为：raw、mangle、nat、filter</p>
+<h5 id="规则链间的匹配顺序"><a href="#规则链间的匹配顺序" class="headerlink" title="规则链间的匹配顺序"></a>规则链间的匹配顺序</h5><p>入站数据：PREROUTING、INPUT<br>出站数据：OUTPUT、POSTROUTING<br>转发数据：PREROUTING、FORWARD、POSTROUTING</p>
+<h5 id="规则链内的匹配顺序"><a href="#规则链内的匹配顺序" class="headerlink" title="规则链内的匹配顺序"></a>规则链内的匹配顺序</h5><p>按顺序依次进行检查，找到相匹配的规则即停止（LOG策略会有例外）<br>若在该链内找不到相匹配的规则，则按该链的默认策略处理</p>
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160202496.png" alt="image-20210717160202496"></p>
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715120215924.png" alt="image-20210715120215924"></p>
+<p>实战：</p>
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160300423.png" alt="image-20210715145217026"></p>
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715150100218.png" alt="image-20210715150100218"></p>
+<p>踩坑：计划任务中，命令一定一定要使用绝对路径，在查找/var/log/cron后，发现报iptables命令未找到（centos8中会显示此报错信息，centos 7 没有显示）</p>
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715153852121.png" alt="image-20210715153852121"></p>
+<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715170938751.png" alt="image-20210715170938751"></p>
 
       
 
@@ -275,11 +323,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/07/15/test/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/07/20/iptables/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          test
+          iptables实验
         
       </div>
     </a>
