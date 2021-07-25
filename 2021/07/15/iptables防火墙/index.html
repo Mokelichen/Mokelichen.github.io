@@ -24,9 +24,8 @@
 <meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160300423.png">
 <meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715150100218.png">
 <meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715153852121.png">
-<meta property="og:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715170938751.png">
 <meta property="article:published_time" content="2021-07-15T02:46:33.000Z">
-<meta property="article:modified_time" content="2021-07-20T12:57:23.141Z">
+<meta property="article:modified_time" content="2021-07-25T10:15:49.746Z">
 <meta property="article:author" content="Mokelichen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715101152252.png">
@@ -224,12 +223,10 @@
 <h5 id="规则链内的匹配顺序"><a href="#规则链内的匹配顺序" class="headerlink" title="规则链内的匹配顺序"></a>规则链内的匹配顺序</h5><p>按顺序依次进行检查，找到相匹配的规则即停止（LOG策略会有例外）<br>若在该链内找不到相匹配的规则，则按该链的默认策略处理</p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160202496.png" alt="image-20210717160202496"></p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715120215924.png" alt="image-20210715120215924"></p>
-<p>实战：</p>
-<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160300423.png" alt="image-20210715145217026"></p>
+<h5 id="管理和设置iptables规则"><a href="#管理和设置iptables规则" class="headerlink" title="管理和设置iptables规则"></a>管理和设置iptables规则</h5><p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160300423.png" alt="image-20210715145217026"></p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715150100218.png" alt="image-20210715150100218"></p>
-<p>踩坑：计划任务中，命令一定一定要使用绝对路径，在查找/var/log/cron后，发现报iptables命令未找到（centos8中会显示此报错信息，centos 7 没有显示）</p>
+<p>踩坑：计划任务中，命令一定一定要使用绝对路径，在查找**/var/log/cron<strong>后，发现报</strong>iptables<strong>命令未找到（</strong>centos8<strong>中会显示此报错信息，</strong>centos 7** 没有显示）</p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715153852121.png" alt="image-20210715153852121"></p>
-<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715170938751.png" alt="image-20210715170938751"></p>
 
       
 

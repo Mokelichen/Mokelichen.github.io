@@ -6,21 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>搭建ftp服务器 | Hexo</title>
+  <title>http/https协议 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建FTP服务器搭建步骤 下载vsftpd 启动ftp 关闭防火墙 测试登录  下载vsftpd1.下载vsftpd 1yum install vsftpd -y  2.查看vsftpd详细信息 1rpm -qi vsftpd   启动ftp3.启动ftp 1service vsftpd start  如何知道进程是否启动？        1.查看进程            ps  aux|gre">
+  <meta name="description" content="HTTP协议HTTP：超文本传输协议是一种按照URL指示，将超文本文档从一台主机(Web服务器)传输到另一台主机(浏览器)的应用层协议，以实现超链接的功能。 什么是超文本？包含有超链接(Link)和各种多媒体元素标记(Markup)的文本。这些超文本文件彼此链接，形成网状(Web)，因此又被称为网页(Web Page)。这些链接使用URL表示。最常见的超文本格式是超文本标记语言HTML。 什么是U">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建ftp服务器">
-<meta property="og:url" content="http://example.com/2021/07/20/%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
+<meta property="og:title" content="http&#x2F;https协议">
+<meta property="og:url" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="搭建FTP服务器搭建步骤 下载vsftpd 启动ftp 关闭防火墙 测试登录  下载vsftpd1.下载vsftpd 1yum install vsftpd -y  2.查看vsftpd详细信息 1rpm -qi vsftpd   启动ftp3.启动ftp 1service vsftpd start  如何知道进程是否启动？        1.查看进程            ps  aux|gre">
+<meta property="og:description" content="HTTP协议HTTP：超文本传输协议是一种按照URL指示，将超文本文档从一台主机(Web服务器)传输到另一台主机(浏览器)的应用层协议，以实现超链接的功能。 什么是超文本？包含有超链接(Link)和各种多媒体元素标记(Markup)的文本。这些超文本文件彼此链接，形成网状(Web)，因此又被称为网页(Web Page)。这些链接使用URL表示。最常见的超文本格式是超文本标记语言HTML。 什么是U">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/07/20/%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20210720202714772.png">
-<meta property="article:published_time" content="2021-07-20T11:54:21.000Z">
-<meta property="article:modified_time" content="2021-07-20T12:55:17.552Z">
+<meta property="og:image" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/http-https%E5%8D%8F%E8%AE%AE/image-20210722145111824.png">
+<meta property="og:image" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/http-https%E5%8D%8F%E8%AE%AE/image-20210722145611102.png">
+<meta property="og:image" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/http-https%E5%8D%8F%E8%AE%AE/image-20210722150704416.png">
+<meta property="og:image" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/http-https%E5%8D%8F%E8%AE%AE/image-20210722151346718.png">
+<meta property="og:image" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/http-https%E5%8D%8F%E8%AE%AE/image-20210722152954815.png">
+<meta property="og:image" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/http-https%E5%8D%8F%E8%AE%AE/image-20210722153539849.png">
+<meta property="article:published_time" content="2021-07-22T01:54:37.000Z">
+<meta property="article:modified_time" content="2021-07-22T07:37:33.089Z">
 <meta property="article:author" content="Mokelichen">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/07/20/%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20210720202714772.png">
+<meta name="twitter:image" content="http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/http-https%E5%8D%8F%E8%AE%AE/image-20210722145111824.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -156,69 +161,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搭建ftp服务器" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-http-https协议" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      搭建ftp服务器
+      http/https协议
     </h1>
   
 
         
-        <a href="/2021/07/20/%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2021-07-20T11:54:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-20</time>
+        <a href="/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/" class="archive-article-date">
+  	<time datetime="2021-07-22T01:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="搭建FTP服务器"><a href="#搭建FTP服务器" class="headerlink" title="搭建FTP服务器"></a>搭建FTP服务器</h1><h3 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h3><ol>
-<li>下载vsftpd</li>
-<li>启动ftp</li>
-<li>关闭防火墙</li>
-<li>测试登录</li>
+        <h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><h5 id="HTTP：超文本传输协议"><a href="#HTTP：超文本传输协议" class="headerlink" title="HTTP：超文本传输协议"></a>HTTP：超文本传输协议</h5><p>是一种按照URL指示，将超文本文档从一台主机(Web服务器)传输到另一台主机(浏览器)的应用层协议，以实现超链接的功能。</p>
+<h5 id="什么是超文本？"><a href="#什么是超文本？" class="headerlink" title="什么是超文本？"></a>什么是超文本？</h5><p>包含有超链接(Link)和各种多媒体元素标记(Markup)的文本。这些超文本文件彼此链接，形成网状(Web)，因此又被称为网页(Web Page)。这些链接使用<strong>URL</strong>表示。最常见的超文本格式是超文本标记语言HTML。</p>
+<h5 id="什么是URL？"><a href="#什么是URL？" class="headerlink" title="什么是URL？"></a>什么是URL？</h5><p>URL即统一资源定位符(<strong>U</strong>niform <strong>R</strong>esource <strong>L</strong>ocator)，用来唯一地标识万维网中的某一个文档。URL由协议、主机和端口(默认为80)以及文件名三部分构成</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722145111824.png" alt="image-20210722145111824"></p>
+<h5 id="HTTP工作原理"><a href="#HTTP工作原理" class="headerlink" title="HTTP工作原理"></a>HTTP工作原理</h5><p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722145611102.png" alt="image-20210722145611102"></p>
+<h5 id="请求报文和响应报文"><a href="#请求报文和响应报文" class="headerlink" title="请求报文和响应报文"></a>请求报文和响应报文</h5><p>请求报文：</p>
+<p>从客户端(浏览器)向Web服务器发送的请求报文。报文的所有字段都是ASCII码。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722150704416.png" alt="image-20210722150704416"></p>
+<p>请求行：常见GET/POST方法，HTTP版本1.1,2.0   如: GET /index.html HTTP/1.1</p>
+<p>请求头:用来说明浏览器、服务器或报文主体的一些信息。如:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host: www.mokez.com</span><br><span class="line">Connection: close(或者keep-alive)</span><br><span class="line">User-Agent: Mozilla/5.0</span><br><span class="line">Accept-Language: cn</span><br></pre></td></tr></table></figure>
+
+
+
+<p>响应报文：</p>
+<p>即从Web服务器到客户机(浏览器)的应答。报文的所有字段都是ASCII码。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722151346718.png" alt="image-20210722151346718"></p>
+<p>状态行：HTTP版本+状态码+状态码描述 如: HTTP/1.1 200 OK</p>
+<p>响应头：用来说明浏览器、服务器或报文主体的一些信息。如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Connection: keep-alive</span><br><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Type: text/html; charset=utf-8</span><br><span class="line">Date: Thu, 22 Jul 2021 07:17:19 GMT</span><br><span class="line">Server: nginx/1.10.2</span><br><span class="line">Transfer-Encoding: chunked</span><br><span class="line">X-Frame-Options: SAMEORIGIN</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h5><p><strong>HTTP状态码</strong>（英语：HTTP Status Code）是用以表示网页服务器<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE">超文本传输协议</a>响应状态的3位数字代码。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722152954815.png" alt="image-20210722152954815"></p>
+<p>常用状态码：</p>
+<p>200 OK 请求成功</p>
+<p>301 Moved Permanently永久重定向</p>
+<p>302 Move Temporarily 临时重定向</p>
+<p>401 Unauthorized 当前请求需要用户验证。</p>
+<p>403 Forbidden 禁止访问</p>
+<p>404 Not Found 页面找不到</p>
+<p>500 Internal Server Error 服务器内部错误</p>
+<p>502 Bad Gateway 作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应。</p>
+<p>503 Service Unavailable 服务不可用</p>
+<h5 id="HTTP代理"><a href="#HTTP代理" class="headerlink" title="HTTP代理"></a>HTTP代理</h5><p>什么是HTTP代理？</p>
+<p>HTTP代理又称Web缓存或代理服务器(Proxy Server),是一种网络实体，能代表浏览器发出HTTP请求，并将最近的一些请求和响应暂存在本地磁盘中，当请求的Web页面先前暂存过，则直接将暂存的页面发给客户端(浏览器)，无须再次访问Internet。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722153539849.png" alt="image-20210722153539849"></p>
+<h4 id="经典面试题："><a href="#经典面试题：" class="headerlink" title="经典面试题："></a>经典面试题：</h4><h5 id="在浏览器中输入https-www-baidu-com，背后到底发生了什么？"><a href="#在浏览器中输入https-www-baidu-com，背后到底发生了什么？" class="headerlink" title="在浏览器中输入https://www.baidu.com，背后到底发生了什么？"></a>在浏览器中输入<a href="https://www.baidu.com，背后到底发生了什么？">https://www.baidu.com，背后到底发生了什么？</a></h5><ol>
+<li>浏览器回去查询系统里是否缓存了<a target="_blank" rel="noopener" href="http://www.baidu.com对应的域名的ip/">www.baidu.com对应的域名的ip</a></li>
+<li>如果没有，就进行dns域名查询解析过程，会得到<a target="_blank" rel="noopener" href="http://www.baidu.com的ip/">www.baidu.com的ip</a></li>
+<li>浏览器会向web服务的80 端口发起3次握手连接，握手如果完成，在发起http请求报文</li>
+<li>请求报文的封装过程是从应用层的封装—》传输层的封装（源端口，目的端口）—》网络层（源ip，目的ip）—》数据链路层（源mac，目的mac【一般都是网关的mac】）—》物理层—》离开电脑</li>
+<li>交换机转发—》路由器转发—》电信—》百度的服务器</li>
+<li>百度的服务器—》解封装—》从物理层到应用层—》nginx</li>
+<li>封装响应报文—》物理层—》离开电脑—》交换机—》路由器—》我们的电脑—》解封装—》浏览器—》渲染—》显示出来</li>
+<li>65秒（此时间是keep-alive时间）如果没有发起新的连接—》进行四次断开</li>
 </ol>
-<h4 id="下载vsftpd"><a href="#下载vsftpd" class="headerlink" title="下载vsftpd"></a>下载vsftpd</h4><p>1.下载vsftpd</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install vsftpd -y</span><br></pre></td></tr></table></figure>
-
-<p>2.查看vsftpd详细信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qi vsftpd</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/07/20/%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20210720202714772.png" alt="image-20210720202714772"></p>
-<h4 id="启动ftp"><a href="#启动ftp" class="headerlink" title="启动ftp"></a>启动ftp</h4><p>3.启动ftp</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start</span><br></pre></td></tr></table></figure>
-
-<p>如何知道进程是否启动？<br>        1.查看进程<br>            ps  aux|grep vsftpd<br>        2.查看端口号<br>            netstat  -anplut|grep vsftpd<br>            lsof -i:21<br>        3.访问服务</p>
-<p>4.去<strong>客户机</strong>测试访问<br>    1.windows里访问<br>        资源管理器<br>        filezilla<br>        浏览器</p>
-<p>​    2.linux里访问<br>​        客户端工具：<br>​            ftp    lftp</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install ftp lftp -y</span><br></pre></td></tr></table></figure>
-
-<h4 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h4><p>5.关闭防火墙</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# systemctl stop firewalld</span><br><span class="line">[root@localhost ~]# systemctl disable firewalld</span><br><span class="line">[root@localhost ~]# setenforce 0</span><br><span class="line">setenforce: SELinux is disabled</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@nginx ~]# ftp 192.168.0.5</span><br><span class="line">ftp: connect: 拒绝连接</span><br><span class="line"><span class="meta">ftp&gt;</span><span class="bash"> </span></span><br></pre></td></tr></table></figure>
-
-<p>ftp服务器需要新建用户，测试登陆，默认情况下，不允许root用户登陆的</p>
-<p>解决办法：</p>
-<p>1.新建用户</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# useradd mokez</span><br><span class="line">[root@localhost ~]# echo 123|passwd mokez --stdin</span><br><span class="line">更改用户 mokez 的密码 。</span><br><span class="line">passwd：所有的身份验证令牌已经成功更新。</span><br><span class="line">[root@localhost ~]# service vsftpd restart  # 重启服务</span><br></pre></td></tr></table></figure>
-
-<p>2.换客户机登录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[root@nginx ~]# ftp 192.168.102.5</span><br><span class="line">Connected to 192.168.102.5 (192.168.102.5).</span><br><span class="line">220 (vsFTPd 3.0.3)</span><br><span class="line">Name (192.168.102.5:root): mokez</span><br><span class="line">331 Please specify the password.</span><br><span class="line">Password:</span><br><span class="line">230 Login successful.</span><br><span class="line">Remote system type is UNIX.</span><br><span class="line">Using binary mode to transfer files.</span><br><span class="line"><span class="meta">ftp&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">ftp&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">ftp&gt;</span><span class="bash"> mkdir mokez1</span></span><br><span class="line">257 &quot;/home/mokez/mokez1&quot; created</span><br><span class="line"><span class="meta">ftp&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">ftp&gt;</span><span class="bash"> ls</span></span><br><span class="line">227 Entering Passive Mode (192,168,102,5,124,106).</span><br><span class="line">150 Here comes the directory listing.</span><br><span class="line">drwxr-xr-x    2 1000     1000            6 Jul 20 12:38 mokez1</span><br><span class="line">226 Directory send OK.</span><br><span class="line"><span class="meta">ftp&gt;</span><span class="bash"> </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="一些知识"><a href="#一些知识" class="headerlink" title="一些知识"></a>一些知识</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mirror  mokez1下载文件夹到本地</span><br><span class="line">get 下载文件</span><br><span class="line">put 上传文件</span><br><span class="line">rm 删除</span><br><span class="line">mkdir 新建</span><br><span class="line">lcd 在本地切换路径</span><br><span class="line">pwd 显示当前所在的路径--》服务器上</span><br><span class="line">!pwd </span><br></pre></td></tr></table></figure>
-
-<p>了解配置文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">[root@ftp-server ~]# cd /etc/vsftpd/</span><br><span class="line">[root@ftp-server vsftpd]# ls</span><br><span class="line">ftpusers  user_list    vsftpd_conf_migrate.sh</span><br><span class="line">[root@ftp-server vsftpd]# </span><br><span class="line">vsftpd.conf 主配置文件</span><br><span class="line">ftpusers 黑名单</span><br><span class="line">user_list 黑名单</span><br><span class="line"></span><br><span class="line">[root@ftp-server vsftpd]# man 5 vsftpd.conf   查询配置文件里的每条指令是干什么使用</span><br><span class="line"></span><br><span class="line">vsftpd默认不允许匿名的ftp这个账号登陆，必须使用useradd新建的用户登陆，用户登陆默认会进入自己的家目录</span><br><span class="line"></span><br><span class="line">chroot_local_user=YES   对本地用户限制在自己的家目录里--》家目录不能有写的权限，会导致登陆不了</span><br><span class="line">							chmod -w  /home/bobo</span><br><span class="line"></span><br><span class="line">chroot_list_enable=YES  启用限制名单--》开后门的人写到这个名单里</span><br><span class="line"></span><br><span class="line">chroot_list_file=/etc/vsftpd/chroot_list  --》具体的名单路径，在这个名单里的用户不受限制，可以离开自己的家目录到其他路径下</span><br><span class="line"></span><br><span class="line">/etc/vsftpd/chroot_list 文件系统自己去新建，使用vim新建，里面存放允许切换路径的用户名</span><br><span class="line">anonymous_enable=YES  允许匿名用户ftp登陆   NO---&gt;YES   --&gt;默认不允许，旧的版本的vsftpd是允许</span><br><span class="line"></span><br><span class="line">local_enable=YES  允许本地用户登陆</span><br><span class="line">xferlog_file=/var/log/xferlog 日志文件的路径</span><br><span class="line">xferlog_std_format=YES  采用标准的日志格式</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">[root@nginx-server ~]# id ftp</span><br><span class="line">uid=14(ftp) gid=50(ftp) 组=50(ftp)</span><br><span class="line">[root@nginx-server ~]# cat /etc/passwd|grep ftp</span><br><span class="line">ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin</span><br><span class="line">[root@nginx-server ~]# lftp  192.168.66.1</span><br><span class="line">lftp 192.168.102.5:~&gt; ls</span><br><span class="line">drwxr-xr-x    2 0        0               6 Nov 16  2020 pub</span><br><span class="line">lftp 192.168.102.5:/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">默认本地用户既可以上传也可以下载</span><br><span class="line">回收用户家目录写的权利--》只能下载不能上传</span><br></pre></td></tr></table></figure>
-
-
-
+<h5 id="HTTP1-1和HTTP2-0有什么区别？"><a href="#HTTP1-1和HTTP2-0有什么区别？" class="headerlink" title="HTTP1.1和HTTP2.0有什么区别？"></a>HTTP1.1和HTTP2.0有什么区别？</h5><h5 id="GET和POST的区别？"><a href="#GET和POST的区别？" class="headerlink" title="GET和POST的区别？"></a>GET和POST的区别？</h5><h5 id="cookie、session和token的区别？"><a href="#cookie、session和token的区别？" class="headerlink" title="cookie、session和token的区别？"></a>cookie、session和token的区别？</h5><h5 id="http和https的区别？"><a href="#http和https的区别？" class="headerlink" title="http和https的区别？"></a>http和https的区别？</h5>
       
 
       
@@ -297,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/20/%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -311,18 +322,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          nginx笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/07/20/iptables/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">iptables实验</div>
+    <a href="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nginx笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   

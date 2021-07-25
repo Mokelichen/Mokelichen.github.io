@@ -152,6 +152,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-http-https协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/">http/https协议</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/" class="archive-article-date">
+  	<time datetime="2021-07-22T01:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><h5 id="HTTP：超文本传输协议"><a href="#HTTP：超文本传输协议" class="headerlink" title="HTTP：超文本传输协议"></a>HTTP：超文本传输协议</h5><p>是一种按照URL指示，将超文本文档从一台主机(Web服务器)传输到另一台主机(浏览器)的应用层协议，以实现超链接的功能。</p>
+<h5 id="什么是超文本？"><a href="#什么是超文本？" class="headerlink" title="什么是超文本？"></a>什么是超文本？</h5><p>包含有超链接(Link)和各种多媒体元素标记(Markup)的文本。这些超文本文件彼此链接，形成网状(Web)，因此又被称为网页(Web Page)。这些链接使用<strong>URL</strong>表示。最常见的超文本格式是超文本标记语言HTML。</p>
+<h5 id="什么是URL？"><a href="#什么是URL？" class="headerlink" title="什么是URL？"></a>什么是URL？</h5><p>URL即统一资源定位符(<strong>U</strong>niform <strong>R</strong>esource <strong>L</strong>ocator)，用来唯一地标识万维网中的某一个文档。URL由协议、主机和端口(默认为80)以及文件名三部分构成</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722145111824.png" alt="image-20210722145111824"></p>
+<h5 id="HTTP工作原理"><a href="#HTTP工作原理" class="headerlink" title="HTTP工作原理"></a>HTTP工作原理</h5><p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722145611102.png" alt="image-20210722145611102"></p>
+<h5 id="请求报文和响应报文"><a href="#请求报文和响应报文" class="headerlink" title="请求报文和响应报文"></a>请求报文和响应报文</h5><p>请求报文：</p>
+<p>从客户端(浏览器)向Web服务器发送的请求报文。报文的所有字段都是ASCII码。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722150704416.png" alt="image-20210722150704416"></p>
+<p>请求行：常见GET/POST方法，HTTP版本1.1,2.0   如: GET /index.html HTTP/1.1</p>
+<p>请求头:用来说明浏览器、服务器或报文主体的一些信息。如:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host: www.mokez.com</span><br><span class="line">Connection: close(或者keep-alive)</span><br><span class="line">User-Agent: Mozilla/5.0</span><br><span class="line">Accept-Language: cn</span><br></pre></td></tr></table></figure>
+
+
+
+<p>响应报文：</p>
+<p>即从Web服务器到客户机(浏览器)的应答。报文的所有字段都是ASCII码。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722151346718.png" alt="image-20210722151346718"></p>
+<p>状态行：HTTP版本+状态码+状态码描述 如: HTTP/1.1 200 OK</p>
+<p>响应头：用来说明浏览器、服务器或报文主体的一些信息。如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Connection: keep-alive</span><br><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Type: text/html; charset=utf-8</span><br><span class="line">Date: Thu, 22 Jul 2021 07:17:19 GMT</span><br><span class="line">Server: nginx/1.10.2</span><br><span class="line">Transfer-Encoding: chunked</span><br><span class="line">X-Frame-Options: SAMEORIGIN</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h5><p><strong>HTTP状态码</strong>（英语：HTTP Status Code）是用以表示网页服务器<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE">超文本传输协议</a>响应状态的3位数字代码。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722152954815.png" alt="image-20210722152954815"></p>
+<p>常用状态码：</p>
+<p>200 OK 请求成功</p>
+<p>301 Moved Permanently永久重定向</p>
+<p>302 Move Temporarily 临时重定向</p>
+<p>401 Unauthorized 当前请求需要用户验证。</p>
+<p>403 Forbidden 禁止访问</p>
+<p>404 Not Found 页面找不到</p>
+<p>500 Internal Server Error 服务器内部错误</p>
+<p>502 Bad Gateway 作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应。</p>
+<p>503 Service Unavailable 服务不可用</p>
+<h5 id="HTTP代理"><a href="#HTTP代理" class="headerlink" title="HTTP代理"></a>HTTP代理</h5><p>什么是HTTP代理？</p>
+<p>HTTP代理又称Web缓存或代理服务器(Proxy Server),是一种网络实体，能代表浏览器发出HTTP请求，并将最近的一些请求和响应暂存在本地磁盘中，当请求的Web页面先前暂存过，则直接将暂存的页面发给客户端(浏览器)，无须再次访问Internet。</p>
+<p><img src="./http-https%E5%8D%8F%E8%AE%AE/image-20210722153539849.png" alt="image-20210722153539849"></p>
+<h4 id="经典面试题："><a href="#经典面试题：" class="headerlink" title="经典面试题："></a>经典面试题：</h4><h5 id="在浏览器中输入https-www-baidu-com，背后到底发生了什么？"><a href="#在浏览器中输入https-www-baidu-com，背后到底发生了什么？" class="headerlink" title="在浏览器中输入https://www.baidu.com，背后到底发生了什么？"></a>在浏览器中输入<a href="https://www.baidu.com，背后到底发生了什么？">https://www.baidu.com，背后到底发生了什么？</a></h5><ol>
+<li>浏览器回去查询系统里是否缓存了<a target="_blank" rel="noopener" href="http://www.baidu.com对应的域名的ip/">www.baidu.com对应的域名的ip</a></li>
+<li>如果没有，就进行dns域名查询解析过程，会得到<a target="_blank" rel="noopener" href="http://www.baidu.com的ip/">www.baidu.com的ip</a></li>
+<li>浏览器会向web服务的80 端口发起3次握手连接，握手如果完成，在发起http请求报文</li>
+<li>请求报文的封装过程是从应用层的封装—》传输层的封装（源端口，目的端口）—》网络层（源ip，目的ip）—》数据链路层（源mac，目的mac【一般都是网关的mac】）—》物理层—》离开电脑</li>
+<li>交换机转发—》路由器转发—》电信—》百度的服务器</li>
+<li>百度的服务器—》解封装—》从物理层到应用层—》nginx</li>
+<li>封装响应报文—》物理层—》离开电脑—》交换机—》路由器—》我们的电脑—》解封装—》浏览器—》渲染—》显示出来</li>
+<li>65秒（此时间是keep-alive时间）如果没有发起新的连接—》进行四次断开</li>
+</ol>
+<h5 id="HTTP1-1和HTTP2-0有什么区别？"><a href="#HTTP1-1和HTTP2-0有什么区别？" class="headerlink" title="HTTP1.1和HTTP2.0有什么区别？"></a>HTTP1.1和HTTP2.0有什么区别？</h5><h5 id="GET和POST的区别？"><a href="#GET和POST的区别？" class="headerlink" title="GET和POST的区别？"></a>GET和POST的区别？</h5><h5 id="cookie、session和token的区别？"><a href="#cookie、session和token的区别？" class="headerlink" title="cookie、session和token的区别？"></a>cookie、session和token的区别？</h5><h5 id="http和https的区别？"><a href="#http和https的区别？" class="headerlink" title="http和https的区别？"></a>http和https的区别？</h5>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-nginx笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/">nginx笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-07-21T06:58:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="nginx安装"><a href="#nginx安装" class="headerlink" title="nginx安装"></a>nginx安装</h3><h3 id="nginx配置文件"><a href="#nginx配置文件" class="headerlink" title="nginx配置文件"></a>nginx配置文件</h3><h3 id="nginx模块"><a href="#nginx模块" class="headerlink" title="nginx模块"></a>nginx模块</h3><h5 id="ngx-http-core-module"><a href="#ngx-http-core-module" class="headerlink" title="ngx_http_core_module"></a>ngx_http_core_module</h5><h5 id="ngx-http-autoindex-module"><a href="#ngx-http-autoindex-module" class="headerlink" title="ngx_http_autoindex_module"></a>ngx_http_autoindex_module</h5><p>nginx做一个可供别人下载的网站</p>
+<p>实现效果如下图：</p>
+<p><img src="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/image-20210721153357708.png" alt="image-20210721153357708"></p>
+<h5 id="ngx-http-stub-status-module"><a href="#ngx-http-stub-status-module" class="headerlink" title="ngx_http_stub_status_module"></a>ngx_http_stub_status_module</h5><p>状态统计</p>
+<p>实现效果如下图：</p>
+<p><img src="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/image-20210721153327192.png" alt="image-20210721153327192"></p>
+<h5 id="ngx-http-auth-basic-module"><a href="#ngx-http-auth-basic-module" class="headerlink" title="ngx_http_auth_basic_module"></a>ngx_http_auth_basic_module</h5>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-搭建ftp服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -422,12 +600,10 @@
 <h5 id="规则链内的匹配顺序"><a href="#规则链内的匹配顺序" class="headerlink" title="规则链内的匹配顺序"></a>规则链内的匹配顺序</h5><p>按顺序依次进行检查，找到相匹配的规则即停止（LOG策略会有例外）<br>若在该链内找不到相匹配的规则，则按该链的默认策略处理</p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160202496.png" alt="image-20210717160202496"></p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715120215924.png" alt="image-20210715120215924"></p>
-<p>实战：</p>
-<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160300423.png" alt="image-20210715145217026"></p>
+<h5 id="管理和设置iptables规则"><a href="#管理和设置iptables规则" class="headerlink" title="管理和设置iptables规则"></a>管理和设置iptables规则</h5><p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210717160300423.png" alt="image-20210715145217026"></p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715150100218.png" alt="image-20210715150100218"></p>
-<p>踩坑：计划任务中，命令一定一定要使用绝对路径，在查找/var/log/cron后，发现报iptables命令未找到（centos8中会显示此报错信息，centos 7 没有显示）</p>
+<p>踩坑：计划任务中，命令一定一定要使用绝对路径，在查找**/var/log/cron<strong>后，发现报</strong>iptables<strong>命令未找到（</strong>centos8<strong>中会显示此报错信息，</strong>centos 7** 没有显示）</p>
 <p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715153852121.png" alt="image-20210715153852121"></p>
-<p><img src="/2021/07/15/iptables%E9%98%B2%E7%81%AB%E5%A2%99/image-20210715170938751.png" alt="image-20210715170938751"></p>
 
       
 
@@ -885,184 +1061,10 @@
 
 
   
-    <article id="post-hexo博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2021-05-20T12:04:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="hexo博客搭建-win10（保姆级）"><a href="#hexo博客搭建-win10（保姆级）" class="headerlink" title="hexo博客搭建 win10（保姆级）"></a>hexo博客搭建 win10（保姆级）</h3><p>先下载node.js，网址<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519211747822.png" alt="1"></p>
-<p>然后一直点击下一步，默认安装就行</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212039417.png" alt="image-20210519212039417"></p>
-<p>按win+R ，输入cmd，进入命令行模式，输入node -v,npm -v，查看是否安装成功和下载版本</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212228954.png" alt="image-20210519212228954"></p>
-<p>npm这个包管理器的源在国内较慢，所以安装cnpm（淘宝的源，速度更快），输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212705764.png" alt="image-20210519212705764"></p>
-<p>cnpm 安装hexo-cli，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213046418.png" alt="image-20210519213046418"></p>
-<p>查看hexo是否安装成功，输入hexo -v</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213129582.png" alt="image-20210519213129582"></p>
-<p>创建一个文件夹blog，示例在D:\blog，如果搭建出现错误，则把文件夹清空重来就行。</p>
-<p>cd D:\blog ,输入hexo init ，初始化博客，然后可以看到hexo自动在blog文件夹下面生成了很多文件，代表初始化成功了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p> <img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213901920.png" alt="image-20210519213901920"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214102327.png" alt="image-20210519214102327"></p>
-<p>启动博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214415553.png" alt="image-20210519214415553"></p>
-<p>打开浏览器，输入localhost:4000，可以看到hexo已经默认生成一篇hello world博客。<img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214740861.png" alt="image-20210519214740861"></p>
-<p>返回终端，ctrl+c 断开连接，开始新建一篇博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;hexo博客搭建&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215347731.png" alt="image-20210519215347731"></p>
-<p>编辑md文件（此步省略）</p>
-<p>编辑完成之后，输入，清理一下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215915029.png" alt="image-20210519215915029"></p>
-<p>生成一下博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220114067.png" alt="image-20210519220114067"></p>
-<p>再次启动hexo，输入hexo s ，进入浏览器，输入localhost:4000<img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220334226.png" alt="image-20210519220334226"></p>
-<p>图片上传错误解决方法，参考</p>
-<p>注意图片的格式，（xxx/test.png） xxx是文件夹，一定需要使用/，而不是\</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f72aaad7b852">https://www.jianshu.com/p/f72aaad7b852</a></p>
-<h3 id="把博客部署到gitee上（失败）"><a href="#把博客部署到gitee上（失败）" class="headerlink" title="把博客部署到gitee上（失败）"></a>把博客部署到gitee上（失败）</h3><ol>
-<li><p>首先，创建一个gitee仓库</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223710169.png" alt="image-20210519223710169"></p>
-</li>
-<li><p>安装hexo的 git 部署插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223959818.png" alt="image-20210519223959818"></p>
-</li>
-<li><p>配置blog目录下_config.yml，在最后添加deploy:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: https://gitee.com/mokez/mokez_blog.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
-<p>保存退出</p>
-</li>
-<li><p>部署到远程仓库，hexo d</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
-<li><p>然后登陆gitee，发现……..</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520193639121.png" alt="image-20210520193639121"></p>
-</li>
-<li><p>换github继续搭建</p>
-</li>
-</ol>
-<h3 id="把博客部署到github上"><a href="#把博客部署到github上" class="headerlink" title="把博客部署到github上"></a>把博客部署到github上</h3><ol>
-<li><p>新建一个仓库</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212036630.png" alt="image-20210520212036630"></p>
-</li>
-<li><p>用户部署个人博客的github仓库的命名必须符合特定要求才行（xx.github.io）</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212204490.png" alt="image-20210520212204490"></p>
-</li>
-<li><p>然后在命令行中，安装一个插件，输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install  --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li><p>设置blog下的_config.yml，在最后输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/Mokelichen/Mokelichen.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>repo：是刚刚创建的github仓库的地址，去github上copy下来即可。</p>
-</li>
-<li><p>现在我们就可以推送到远程仓库了，</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;test&quot; #这是新建一个test.md</span><br><span class="line">hexo clean   #推送前先清理一下</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo d  -g#推送</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213906982.png" alt="image-20210520213906982"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213948352.png" alt="image-20210520213948352"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214310236.png" alt="image-20210520214310236"></p>
-</li>
-<li><p>输入账号密码</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214255327.png" alt="image-20210520214255327"></p>
-</li>
-<li><p>再输入一次账号密码</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214415924.png" alt="image-20210520214415924"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214448127.png" alt="image-20210520214448127"></p>
-</li>
-<li><p>然后刷新github,可以看看自己推送成功没有</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214821356.png" alt="image-20210520214821356"></p>
-</li>
-<li><p>在浏览器输入，仓库名后面</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214918157.png" alt="image-20210520214918157"></p>
-</li>
-<li><p>终于成功了！！！</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214707687.png" alt="image-20210520214707687"></p>
-</li>
-</ol>
-<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><ol>
-<li><p>先下载一个yilia主题</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222029579.png" alt="image-20210520222029579"></p>
-</li>
-<li><p>然后打开_config.yml，将theme更换为yilia</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222512881.png" alt="image-20210520222512881"></p>
-</li>
-<li><p>然后同上推送，就成功了</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520223130406.png" alt="image-20210520223130406"></p>
-<p>完美！</p>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
