@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>nginx笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nginx安装nginx配置文件nginx模块ngx_http_core_modulengx_http_autoindex_modulenginx做一个可供别人下载的网站 实现效果如下图：  ngx_http_stub_status_module状态统计 实现效果如下图：  ngx_http_auth_basic_module">
+  <meta name="description" content="nginx安装nginx配置文件nginx模块ngx_http_core_modulengx_http_autoindex_modulenginx做一个可供别人下载的网站 实现效果如下图：  ngx_http_stub_status_module状态统计 实现效果如下图：  ngx_http_auth_basic_module认证模块 ngx_http_log_module日志模块 access.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx笔记">
 <meta property="og:url" content="http://example.com/2021/07/21/nginx%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="nginx安装nginx配置文件nginx模块ngx_http_core_modulengx_http_autoindex_modulenginx做一个可供别人下载的网站 实现效果如下图：  ngx_http_stub_status_module状态统计 实现效果如下图：  ngx_http_auth_basic_module">
+<meta property="og:description" content="nginx安装nginx配置文件nginx模块ngx_http_core_modulengx_http_autoindex_modulenginx做一个可供别人下载的网站 实现效果如下图：  ngx_http_stub_status_module状态统计 实现效果如下图：  ngx_http_auth_basic_module认证模块 ngx_http_log_module日志模块 access.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/07/21/nginx%E7%AC%94%E8%AE%B0/image-20210721153357708.png">
 <meta property="og:image" content="http://example.com/2021/07/21/nginx%E7%AC%94%E8%AE%B0/image-20210721153327192.png">
 <meta property="article:published_time" content="2021-07-21T06:58:16.000Z">
-<meta property="article:modified_time" content="2021-07-21T13:40:56.341Z">
+<meta property="article:modified_time" content="2021-07-26T04:04:00.611Z">
 <meta property="article:author" content="Mokelichen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/07/21/nginx%E7%AC%94%E8%AE%B0/image-20210721153357708.png">
@@ -183,7 +183,19 @@
 <h5 id="ngx-http-stub-status-module"><a href="#ngx-http-stub-status-module" class="headerlink" title="ngx_http_stub_status_module"></a>ngx_http_stub_status_module</h5><p>状态统计</p>
 <p>实现效果如下图：</p>
 <p><img src="/2021/07/21/nginx%E7%AC%94%E8%AE%B0/image-20210721153327192.png" alt="image-20210721153327192"></p>
-<h5 id="ngx-http-auth-basic-module"><a href="#ngx-http-auth-basic-module" class="headerlink" title="ngx_http_auth_basic_module"></a>ngx_http_auth_basic_module</h5>
+<h5 id="ngx-http-auth-basic-module"><a href="#ngx-http-auth-basic-module" class="headerlink" title="ngx_http_auth_basic_module"></a>ngx_http_auth_basic_module</h5><p>认证模块</p>
+<h5 id="ngx-http-log-module"><a href="#ngx-http-log-module" class="headerlink" title="ngx_http_log_module"></a>ngx_http_log_module</h5><p>日志模块</p>
+<p>access.log和error.log</p>
+<h3 id="构建两个虚拟主机"><a href="#构建两个虚拟主机" class="headerlink" title="构建两个虚拟主机"></a>构建两个虚拟主机</h3><h5 id="1-cd-usr-local-nginx-conf"><a href="#1-cd-usr-local-nginx-conf" class="headerlink" title="1.cd /usr/local/nginx/conf"></a>1.cd /usr/local/nginx/conf</h5><h5 id="2-修改nginx-conf"><a href="#2-修改nginx-conf" class="headerlink" title="2.修改nginx.conf"></a>2.修改nginx.conf</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  www.sc.com;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            root   html/sc.com;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  www.mokez.com;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            root   html/mokez.com;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-新建网页"><a href="#3-新建网页" class="headerlink" title="3.新建网页"></a>3.新建网页</h5><p>cd ../html，并新建sc.com和mokez.com的文件夹，分别vim index.html，添加内容即可</p>
+<h5 id="4-修改hosts文件"><a href="#4-修改hosts文件" class="headerlink" title="4.修改hosts文件"></a>4.修改hosts文件</h5><p>linux在/etc/hosts中添加</p>
+<p>Windows在C:\Windows\System32\drivers\etc\hosts 文件中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">192.168.189.147 www.sc.com</span><br><span class="line">192.168.189.147 www.mokez.com</span><br></pre></td></tr></table></figure>
+
+<h5 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h5><p>优点：节省资源</p>
+<p>缺点：一个ip被攻击，就两个域名网站都会被破坏</p>
+
       
 
       
@@ -276,11 +288,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/07/22/http-https%E5%8D%8F%E8%AE%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/07/26/HTTP/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          http/https协议
+          HTTP
         
       </div>
     </a>
