@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Mokelichen的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Mokelichen的个人博客">
 <meta property="og:url" content="http://example.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Mokelichen的个人博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Mokelichen">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Mokelichen的个人博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,10 +43,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/me.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">Mokelichen</a></h1>
 		</hgroup>
 		
 
@@ -56,6 +56,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -85,6 +87,8 @@
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
+					<a class="gitee" target="_blank" href="/" title="gitee"><i class="icon-gitee"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -101,13 +105,15 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/me.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">Mokelichen</h1>
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -126,16 +132,20 @@
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
+						<a class="gitee" target="_blank" href="/" title="gitee"><i class="icon-gitee"></i></a>
+			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -176,119 +186,7 @@
 <p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519211747822.png" alt="1"></p>
 <p>然后一直点击下一步，默认安装就行</p>
 <p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212039417.png" alt="image-20210519212039417"></p>
-<p>按win+R ，输入cmd，进入命令行模式，输入node -v,npm -v，查看是否安装成功和下载版本</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212228954.png" alt="image-20210519212228954"></p>
-<p>npm这个包管理器的源在国内较慢，所以安装cnpm（淘宝的源，速度更快），输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519212705764.png" alt="image-20210519212705764"></p>
-<p>cnpm 安装hexo-cli，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213046418.png" alt="image-20210519213046418"></p>
-<p>查看hexo是否安装成功，输入hexo -v</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213129582.png" alt="image-20210519213129582"></p>
-<p>创建一个文件夹blog，示例在D:\blog，如果搭建出现错误，则把文件夹清空重来就行。</p>
-<p>cd D:\blog ,输入hexo init ，初始化博客，然后可以看到hexo自动在blog文件夹下面生成了很多文件，代表初始化成功了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p> <img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519213901920.png" alt="image-20210519213901920"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214102327.png" alt="image-20210519214102327"></p>
-<p>启动博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214415553.png" alt="image-20210519214415553"></p>
-<p>打开浏览器，输入localhost:4000，可以看到hexo已经默认生成一篇hello world博客。<img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519214740861.png" alt="image-20210519214740861"></p>
-<p>返回终端，ctrl+c 断开连接，开始新建一篇博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;hexo博客搭建&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215347731.png" alt="image-20210519215347731"></p>
-<p>编辑md文件（此步省略）</p>
-<p>编辑完成之后，输入，清理一下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519215915029.png" alt="image-20210519215915029"></p>
-<p>生成一下博客，输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220114067.png" alt="image-20210519220114067"></p>
-<p>再次启动hexo，输入hexo s ，进入浏览器，输入localhost:4000<img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519220334226.png" alt="image-20210519220334226"></p>
-<p>图片上传错误解决方法，参考</p>
-<p>注意图片的格式，（xxx/test.png） xxx是文件夹，一定需要使用/，而不是\</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f72aaad7b852">https://www.jianshu.com/p/f72aaad7b852</a></p>
-<h3 id="把博客部署到gitee上（失败）"><a href="#把博客部署到gitee上（失败）" class="headerlink" title="把博客部署到gitee上（失败）"></a>把博客部署到gitee上（失败）</h3><ol>
-<li><p>首先，创建一个gitee仓库</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223710169.png" alt="image-20210519223710169"></p>
-</li>
-<li><p>安装hexo的 git 部署插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210519223959818.png" alt="image-20210519223959818"></p>
-</li>
-<li><p>配置blog目录下_config.yml，在最后添加deploy:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: https://gitee.com/mokez/mokez_blog.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-
-<p>保存退出</p>
-</li>
-<li><p>部署到远程仓库，hexo d</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
-<li><p>然后登陆gitee，发现……..</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520193639121.png" alt="image-20210520193639121"></p>
-</li>
-<li><p>换github继续搭建</p>
-</li>
-</ol>
-<h3 id="把博客部署到github上"><a href="#把博客部署到github上" class="headerlink" title="把博客部署到github上"></a>把博客部署到github上</h3><ol>
-<li><p>新建一个仓库</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212036630.png" alt="image-20210520212036630"></p>
-</li>
-<li><p>用户部署个人博客的github仓库的命名必须符合特定要求才行（xx.github.io）</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520212204490.png" alt="image-20210520212204490"></p>
-</li>
-<li><p>然后在命令行中，安装一个插件，输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install  --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li><p>设置blog下的_config.yml，在最后输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/Mokelichen/Mokelichen.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>repo：是刚刚创建的github仓库的地址，去github上copy下来即可。</p>
-</li>
-<li><p>现在我们就可以推送到远程仓库了，</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;test&quot; #这是新建一个test.md</span><br><span class="line">hexo clean   #推送前先清理一下</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo d  -g#推送</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213906982.png" alt="image-20210520213906982"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520213948352.png" alt="image-20210520213948352"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214310236.png" alt="image-20210520214310236"></p>
-</li>
-<li><p>输入账号密码</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214255327.png" alt="image-20210520214255327"></p>
-</li>
-<li><p>再输入一次账号密码</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214415924.png" alt="image-20210520214415924"></p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214448127.png" alt="image-20210520214448127"></p>
-</li>
-<li><p>然后刷新github,可以看看自己推送成功没有</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214821356.png" alt="image-20210520214821356"></p>
-</li>
-<li><p>在浏览器输入，仓库名后面</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214918157.png" alt="image-20210520214918157"></p>
-</li>
-<li><p>终于成功了！！！</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520214707687.png" alt="image-20210520214707687"></p>
-</li>
-</ol>
-<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><ol>
-<li><p>先下载一个yilia主题</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222029579.png" alt="image-20210520222029579"></p>
-</li>
-<li><p>然后打开_config.yml，将theme更换为yilia</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520222512881.png" alt="image-20210520222512881"></p>
-</li>
-<li><p>然后同上推送，就成功了</p>
-<p><img src="/2021/05/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image-20210520223130406.png" alt="image-20210520223130406"></p>
-<p>完美！</p>
-</li>
-</ol>
-
+        
       
 
       

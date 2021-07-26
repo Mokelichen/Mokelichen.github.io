@@ -6,25 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>ICMP时间戳 | Hexo</title>
+  <title>ICMP时间戳 | Mokelichen的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大写W，间隔一秒 小写w，总共一秒  ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间） 来回的时间，由于ICMP中有三个时间戳。 ICMP 时间戳请求允许系统向另一个系统查询当前的时间，但不包含日期，返回的建议值是自午夜零点开始计算的时间（UTC）。 在发送 ICMP 时间戳请求时，请求端填写发起时间戳，然后发送报文。应答系统收到请求报文时填写接收时间戳，在发送应答时填写发送时间">
+  <meta name="description" content="ping命令 大写W，间隔一秒 小写w，总共一秒">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ICMP时间戳">
 <meta property="og:url" content="http://example.com/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="大写W，间隔一秒 小写w，总共一秒  ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间） 来回的时间，由于ICMP中有三个时间戳。 ICMP 时间戳请求允许系统向另一个系统查询当前的时间，但不包含日期，返回的建议值是自午夜零点开始计算的时间（UTC）。 在发送 ICMP 时间戳请求时，请求端填写发起时间戳，然后发送报文。应答系统收到请求报文时填写接收时间戳，在发送应答时填写发送时间">
+<meta property="og:site_name" content="Mokelichen的个人博客">
+<meta property="og:description" content="ping命令 大写W，间隔一秒 小写w，总共一秒">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/image-20210714115820546.png">
 <meta property="og:image" content="http://example.com/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/image-20210714132133226.png">
 <meta property="og:image" content="http://example.com/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/image-20210714132209069.png">
 <meta property="article:published_time" content="2021-07-15T02:42:38.000Z">
-<meta property="article:modified_time" content="2021-07-15T02:50:00.028Z">
+<meta property="article:modified_time" content="2021-07-26T06:31:40.557Z">
 <meta property="article:author" content="Mokelichen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/image-20210714115820546.png">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Mokelichen的个人博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -51,10 +51,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/me.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">Mokelichen</a></h1>
 		</hgroup>
 		
 
@@ -64,6 +64,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -93,6 +95,8 @@
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
+					<a class="gitee" target="_blank" href="/" title="gitee"><i class="icon-gitee"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -109,13 +113,15 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/me.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">Mokelichen</h1>
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -134,16 +140,20 @@
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
+						<a class="gitee" target="_blank" href="/" title="gitee"><i class="icon-gitee"></i></a>
+			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -178,12 +188,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/image-20210714115820546.png" alt="image-20210714115820546"></p>
+        <h3 id="ping命令"><a href="#ping命令" class="headerlink" title="ping命令"></a>ping命令</h3><p><img src="/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/image-20210714115820546.png" alt="image-20210714115820546"></p>
 <p>大写W，间隔一秒</p>
 <p>小写w，总共一秒</p>
 <p><img src="/2021/07/15/ICMP%E6%97%B6%E9%97%B4%E6%88%B3/image-20210714132133226.png" alt="image-20210714132133226"></p>
-<p>ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间）</p>
-<p>来回的时间，由于ICMP中有三个时间戳。</p>
+<span id="more"></span>
+
+<h3 id="ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间）"><a href="#ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间）" class="headerlink" title="ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间）"></a>ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间）</h3><p>来回的时间，由于ICMP中有三个时间戳。</p>
 <p>ICMP 时间戳请求允许系统向另一个系统查询当前的时间，但不包含日期，返回的建议值是自午夜零点开始计算的时间（UTC）。</p>
 <p>在发送 ICMP 时间戳请求时，请求端填写发起时间戳，然后发送报文。应答系统收到请求报文时填写接收时间戳，在发送应答时填写发送时间戳。</p>
 <p>ICMP 时间戳请求与应答报文格式如图所示。</p>
@@ -312,6 +323,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ping%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">ping命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ICMP%E6%AD%A4%E5%A4%84%E6%97%B6%E9%97%B4%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E6%97%B6%E9%97%B4%EF%BC%9F%EF%BC%88%E9%80%81%E8%BF%87%E5%8E%BB%EF%BC%8C%E4%BC%A0%E5%9B%9E%E6%9D%A5%E8%BF%98%E6%98%AF%E6%9D%A5%E5%9B%9E%E7%9A%84%E6%97%B6%E9%97%B4%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">ICMP此处时间到底是什么时间？（送过去，传回来还是来回的时间）</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
