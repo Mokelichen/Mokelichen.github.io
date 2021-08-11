@@ -185,7 +185,7 @@
         <h2 id="项目名称：-构建一个基于nginx的高可用web集群"><a href="#项目名称：-构建一个基于nginx的高可用web集群" class="headerlink" title="项目名称： 构建一个基于nginx的高可用web集群"></a>项目名称： 构建一个基于nginx的高可用web集群</h2><h2 id="项目环境"><a href="#项目环境" class="headerlink" title="项目环境"></a>项目环境</h2><p>​    centos7/8服务器8台、nginx 1.21.1、ab、nfs 4、zabbix 5.0、keepalived 2.1.5 </p>
 <h2 id="项目架构图"><a href="#项目架构图" class="headerlink" title="项目架构图"></a>项目架构图</h2><p><img src="/2021/08/04/%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Enginx%E7%9A%84%E9%AB%98%E5%8F%AF%E7%94%A8web%E9%9B%86%E7%BE%A4/image-20210804113948869.png" alt="image-20210804113948869"></p>
 <h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><p>​    构建一个基于nginx的http负载均衡的web集群项目，模拟企业的业务环境达到构建一个高并发，高可用的web集群。通过压力测试来检验整个集群的性能，找出瓶颈，不断的去优化。</p>
-<h2 id="项目步骤"><a href="#项目步骤" class="headerlink" title="项目步骤"></a>项目步骤</h2><h3 id="1-web集群"><a href="#1-web集群" class="headerlink" title="1.web集群"></a>1.web集群</h3><p>使用3台服务器做后端的real-server，提供真正的web服务，脚本一键安装部署并且配置好nginx并发数，和worker的进程数等</p>
+<h2 id="项目步骤"><a href="#项目步骤" class="headerlink" title="项目步骤"></a>项目步骤</h2><h3 id="1-web集群"><a href="#1-web集群" class="headerlink" title="1.web集群"></a>1.web集群</h3><p>使用3台服务器做后端的real-server，配置好IP地址，提供真正的web服务，脚本一键安装部署并且配置好nginx并发数，和worker的进程数等</p>
         
       
 
